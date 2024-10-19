@@ -1,0 +1,30 @@
+[package]
+name = "stringsext"
+version = "0.2.1"
+description = "Extract Strings including unicode from a binary"
+authors = ["Sriram <sg@analyze.rs>"]
+edition = "2021"
+
+[dependencies]
+encoding_rs= "0.8.34"
+itertools = "0.13"
+scoped_threadpool = "0.1"
+thiserror = "1"
+
+[lib]
+name = "stringexts"
+path = "src/lib.rs"
+
+[[example]]
+name="stringsext_cli"
+path= "examples/stringsext_cli.rs"
+
+[profile.dev]
+opt-level = 3
+
+[profile.release]
+codegen-units = 1
+debug-assertions = false
+debug = false
+opt-level = 3
+lto = true
