@@ -1,0 +1,12 @@
+Cargo.lock
+target/
+
+.DS_Store
+.idea/
+.vscode/
+
+*.zip
+*.tar.gz
+*.gz
+*.rar
+
